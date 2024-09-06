@@ -4,7 +4,11 @@ class PalabrasRepetidas
     def initialize(texto)
       @texto = texto
     end
-  
+
+  #metodo de actualizacion
+    def actualizar(nuevo_texto)
+        @texto=nuevo_texto
+    end
   #metodo
     def contador_repetidas
       palabras = @texto.scan(/\w+/)
@@ -25,7 +29,16 @@ class PalabrasRepetidas
   r = contador.contador_repetidas
   
   # Imprimir el resultado
+puts "Primer texto:"
   r.each do |palabra, cuenta|
     puts "La palabra: '#{palabra}', esta repetida: #{cuenta} veces."
   end
-  
+
+  #Actualizar texto
+contador.actualizar_texto("Carro, avion, carro, moto")
+r2=contador.contador_repetidas
+
+puts "\nTexto Actualizado:"
+r2.each do |palabra, cuenta|
+     puts "La palabra: '#{palabra}', esta repetida: #{cuenta} veces."
+end
