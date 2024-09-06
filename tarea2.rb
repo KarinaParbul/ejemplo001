@@ -21,11 +21,18 @@ class PalabrasRepetidas
   
       contador
     end
+    
+    def to_s
+      "Este es el texto actual: #{@texto}"
+    end
   end
   
 
   texto = "Carro, casa, carro, bicicleta"
   contador = PalabrasRepetidas.new(texto)
+
+  puts contador.to_s
+
   r = contador.contador_repetidas
   
   # Imprimir el resultado
@@ -36,6 +43,9 @@ puts "Primer texto:"
 
   #Actualizar texto
 contador.actualizar("Carro, avion, carro, moto")
+
+puts "\n" + contador.to_s
+
 r2=contador.contador_repetidas
 
 puts "\nTexto Actualizado:"
