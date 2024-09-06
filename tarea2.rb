@@ -35,7 +35,7 @@ puts "Primer texto:"
   end
 
   #Actualizar texto
-contador.actualizar_texto("Carro, avion, carro, moto")
+contador.actualizar("Carro, avion, carro, moto")
 r2=contador.contador_repetidas
 
 puts "\nTexto Actualizado:"
